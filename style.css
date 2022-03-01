@@ -1,6 +1,5 @@
 body {
-  background-color: #FCF8EC;
-  /* background-image : url('../image/background.png'); */
+  background: linear-gradient(110deg, #C1CFC0 60%, #FCF8EC 60%);
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 1.6;
