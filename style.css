@@ -1,5 +1,6 @@
 body {
   background-color: #FCF8EC;
+  /* background-image : url('../image/background.png'); */
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 1.6;
@@ -39,16 +40,57 @@ p {
   margin-bottom: 20px;
 }
 
-.btn-blue {
-  color: white;
-  background-color: 02475E;
-  text-align: center;
-  padding: 10px 15px;
-  border-radius: 4px;
+.img-collage {
+  width: 100%;
 }
 
-a:hover {
-  background-color: 687980;
+/* BUTTON */
+
+.btn-blue {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  margin-top: 3%;
+  margin-bottom: -6%;
+}
+
+.btn-blue span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #3E00FF;
+  color:white;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
 }
 
 .container {
@@ -84,23 +126,60 @@ a:hover {
 
 .text-center{
 margin-top: 20px;
+line-height: 30px;
 }
 
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .container {
-    width: 700px;
-  }
+/* FOOTER */
+.footer {
+  background: #6998AB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
 }
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 500px;
-  }
+.footer-links {
+  display: flex;
+  align-items: center;
 }
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .container {
-    width: 300px;
-  }
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
 }
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #FCF8EC;
+}
+
+.img-food {
+  width: 21%;
+  margin-left: -44%;
+  margin-right: -6%;
+  position: sticky;
+}
+
+
+    @media (max-width: 960px) {
+      /* For a screen < 960px, this CSS will be read */
+      .container {
+        width: 700px;
+      }
+    }
+    @media (max-width: 720px) {
+      /* For a screen < 720px, this CSS will be read */
+      .container {
+        width: 500px;
+      }
+    }
+    @media (max-width: 540px) {
+      /* For a screen < 540px, this CSS will be read */
+      .container {
+        width: 300px;
+      }
+    }
